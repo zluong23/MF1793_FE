@@ -1,0 +1,408 @@
+.body-table {
+  background-color: white;
+  padding: 1rem;
+  margin-top: 19px;
+}
+
+.body-top {
+  font-size: 24px;
+}
+
+.table__main {
+  margin-top: 1.1rem;
+  overflow: auto;
+  max-height: 66vh;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+table,
+tr {
+  border: 1px solid #f2f2f2;
+}
+
+tr:hover {
+  background-color: #f0fdee;
+}
+
+thead {
+  background-color: #f4f4f4;
+}
+
+th,
+td {
+  text-align: center;
+  height: 3rem;
+}
+
+thead {
+  padding: 0;
+}
+
+.table__nav--cancel-select {
+  color: red;
+  font-weight: 600;
+  margin-left: 1rem;
+}
+
+.table__nav--delete-all {
+  background-color: #f4f4f4;
+  padding: 0 0.3rem 0.5rem 0;
+  border-radius: 3px;
+  font-weight: 500;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.table__nav--delete-all .icon {
+  color: red;
+  font-weight: 500;
+  position: relative;
+  top: 6px;
+}
+
+.table__footer {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.table__footer--page-more-icon,
+.table__footer--icon-1,
+.table__footer--icon-2 {
+  position: relative;
+  top: 6px;
+}
+.table__footer--right span:first-child {
+  margin-right: 1rem;
+}
+
+.table__footer--page-more-icon {
+  margin-right: 1rem;
+}
+
+.table__nav-add {
+  padding: 0.6rem;
+  border-radius: 5px;
+  background-color: #00843e;
+  box-sizing: unset;
+  color: white;
+  position: relative;
+  cursor: pointer;
+}
+
+.table__nav-add .icon {
+  position: absolute;
+  top: 4px;
+}
+
+.table__nav-add .text {
+  margin-left: 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.table__nav {
+  display: flex;
+  justify-content: space-between;
+}
+.header__option{
+  background: url("../../img/Sprites.64af8f61.svg") no-repeat -1799px -478px;
+  width: 32px;
+	height: 32px;
+  margin-top: 23px;
+  
+}
+.m-dialogform {
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.m-dialogform__container {
+  margin: auto;
+  background-color: #fff;
+  position: relative;
+  top: 5%;
+  min-width: 900px;
+  border-radius: 5px;
+  width: fit-content;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+}
+.dialog-title {
+  font-size: 24px;
+  margin: 0.5rem;
+  font-weight: 600;
+}
+
+.modal-inp {
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  height: 2.5rem;
+}
+.modal-inp__name {
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  height: 2.5rem;
+  width: 210px;
+}
+.modal-inp__CMTND {
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  height: 2.5rem;
+  width: 200px;
+ 
+}
+
+.row0,
+.row1,
+.row2,
+.row3,
+.row4,
+.row5,
+.row6,
+.row7 {
+  display: flex;
+}
+
+.modal-lb-exc {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+}
+
+.modal-radio {
+  margin-top: 0.3rem;
+}
+
+.modal-lb {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+}
+
+.modal-inp {
+  padding: 1rem;
+  margin-top: 0.3rem;
+}
+.modal-inp__name {
+  padding: 1rem;
+  margin-top: 0.3rem;
+}
+.modal-inp__CMTND {
+  padding: 1rem;
+  margin-top: 0.3rem;
+  margin-left: -12px;
+}
+
+
+.add-modal-sdt,
+.add-modal-noicap,
+.add-modal-email {
+  width: 50%;
+}
+
+.add-modal-congty,
+.add-modal-diachi,
+.add-modal-sotienno {
+  width: 100%;
+}
+
+.row7 {
+  justify-content: end;
+  /* background-color: #f4f4f4; */
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.edit-button button {
+  visibility: hidden;
+}
+
+tr:hover .edit-button button {
+  visibility: visible;
+}
+.edit-icon{
+  background: url("../../img/Sprites.64af8f61.svg") no-repeat -1434px -90px;
+  width: 22px;
+	height: 23px;
+  border: unset;
+  position: relative;
+}
+
+
+
+
+
+.row0 {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.row0 .icon {
+  color: red;
+  display: block;
+  cursor: pointer;
+}
+
+
+
+
+.table__tooltip {
+  display: none;
+}
+
+.table__tooltip span {
+  color: #7e7e7e;
+}
+
+.table__tooltip--icon1 {
+  background-color: white;
+  border-radius: 50%;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.table__tooltip--icon2 {
+  background-color: white;
+  border-radius: 50%;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+/*  */
+select {
+  height: 36px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  padding-left: 0px 12px;
+}
+select:focus {
+  border-color: #50b83c;
+}
+
+
+.icon-close{
+  font-size: 24px;
+  background-color: #fff;
+  margin-top: -50px;
+ color: red;
+}
+/* dialog2 */
+.card-dialog2 {
+  position: fixed;
+  z-index: 1;
+  background-color: var(--cart-base);
+  width: 416px;
+  height: 173px;
+  top: 150px;
+  left: 550px;
+
+
+}
+
+.card-dialog2 .card-title {
+  font-size: 20px;
+  color: #1f1f1f;
+  font-weight: bold;
+  position: relative;
+  left: 24px;
+  top: 24px;
+}
+
+
+.card-dialog2 .card-title2 {
+
+  
+  font-size: 14px;
+  color: #1f1f1f;
+  font-family: "Roboto", sans-serif;
+  font-style: medium;
+  font-size: 14px;
+  color: #1f1f1f;
+  position: relative;
+  left: 24px;
+  top: 48px;
+}
+
+.card-dialog2 .btn-dialog {
+  width: var(--width-base);
+  height: var(--height-base);
+  background-color: #ffffff;
+  outline: none;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  left: 190px;
+  top: 72px;
+}
+.card-dialog2 .btn-dialog:hover {
+  background-color: var(--coler-hover);
+  cursor: pointer;
+}
+.card-dialog2 .btn-dialog:active {
+  border: var(--coler-hover);
+  width: var(--width-base);
+  height: var(--height-base);
+  border-radius: var(--border-btn);
+}
+.card-dialog2 .btn-dialog2 {
+  width: 95px;
+  height: var(--height-base);
+  border-radius: var(--border-btn);
+  background-color: #ffffff;
+  outline: none;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  left: 113px;
+  top: 72px;
+}
+.card-dialog2 .btn-dialog2:hover {
+  background-color: var(--coler-hover);
+  cursor: pointer;
+}
+.card-dialog2 .btn-dialog2:active {
+  border: var(--coler-hover);
+  width: var(--width-base);
+  height: var(--height-base);
+  border-radius: var(--border-btn);
+}
+
+.card-dialog2 .btn-dialog3 {
+  width: var(--width-base);
+  height: var(--height-base);
+  background-color: var(--coler-primary);
+  border-radius: var(--border-btn);
+  outline: none;
+  border: 1px solid #e0e0e0;
+  color: #ffffff;
+  position: relative;
+  left: 300px;
+  top: 72px;
+}
+.card-dialog2 .btn-dialog3:hover {
+  background-color: var(--coler-hover);
+  cursor: pointer;
+}
+.card-dialog2 .btn-dialog3:active {
+  border: var(--coler-hover);
+  height: var(--height-base);
+  width: var(--width-base);
+  border-radius: var(--border-btn);
+}
+
+

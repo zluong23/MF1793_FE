@@ -1,0 +1,89 @@
+.btn-themmoi:hover {
+  background-color: var(--coler-hover);
+  cursor: pointer;
+  border-color: #fff;
+}
+
+.btn-themmoi {
+  width: var(--width-base);
+  height: var(--height-base);
+  border-radius: var(--border-btn);
+  background-color: var(--coler-primary);
+  color: #fff;
+  outline: none;
+  border: 1px solid var(--border-btn);
+  position: absolute;
+  top: 20px;
+  left: 88%;
+}
+
+/* button:disabled,
+button[disabled] {
+  background-color: var(--coler-disable);
+  cursor: not-allowed;
+} */
+/* .btn-huy:active {
+  border: var(--coler-hover);
+  width: var(--width-base);
+  height: var(--height-base);
+  border-radius: var(--border-btn);
+} */
+.icon-themmoi {
+  position: absolute;
+  top: 10px;
+}
+
+.btn-dangky:hover {
+  background-color: var(--coler-hover);
+  cursor: pointer;
+  border-color: #fff;
+}
+
+.btn-dangky {
+  width: 100px;
+  height: var(--height-base);
+  border-radius: var(--border-btn);
+  background-color: var(--coler-primary);
+  color: #fff;
+  outline: none;
+  border: 1px solid var(--border-btn);
+  position: absolute;
+  top: 610px;
+  left: 77%;
+}
+.btn-huy:hover {
+  background-color: var(--coler-hover);
+  cursor: pointer;
+  border-color: #fff;
+}
+
+.btn-huy {
+  width: 100px;
+  height: var(--height-base);
+  margin-right: 10px;
+  border-radius: var(--border-btn);
+  background-color: #fff(--coler-primary);
+  color: black;
+  outline: none;
+  border: 1px solid #E6E6E6;
+  
+}
+
+.btn-cat:hover {
+  background-color: var(--coler-hover);
+  cursor: pointer;
+  border-color: #fff;
+}
+
+.btn-cat {
+  width: 94px;
+  height: var(--height-base);
+  border-radius: var(--border-btn);
+  background-color: #50b83c;
+  color: #fff;
+  outline: none;
+  border: 1px solid var(--border-btn);
+  
+  
+}
+

@@ -1,0 +1,29 @@
+:root {
+  --coler-primary: #65bd55;
+  --coler-hover: #92f083;
+  --coler-disable: #c3e4c7;
+  --coler-focus: #50b83c;
+  --height-base: 36px;
+  --coler-base: #e0e0e0;
+  --width-base: 80px;
+  --border-btn: 4px;
+  --cart-base: #ffffff;
+}
+body {
+  background-color: aliceblue;
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  letter-spacing: 0px;
+  line-height: 1;
+}
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+

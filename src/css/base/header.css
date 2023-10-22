@@ -1,0 +1,75 @@
+
+.header__left {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-left: 1rem;
+  height: 56px;
+}
+
+.header__sidebar span {
+  font-size: 2rem;
+
+}
+
+.header-icon__logo {
+
+  background: url('../../img/Sprites.64af8f61.svg') no-repeat -352px -894px;
+  width: 32px;
+	height: 32px;
+
+}
+.header-icon__down {
+
+  background: url('../../img/Sprites.64af8f61.svg') no-repeat -1799px -478px;
+  width: 32px;
+	height: 32px;
+  margin-top: 25px;
+
+}
+.header__logo{
+  flex: 1;
+  background: url('../../img/Sprites.64af8f61.svg') no-repeat -1131px -1688px;
+  width: 150px;
+	height: 36px;
+
+
+}
+.header-icon__toastmessage{
+  
+  background: url('../../img/Sprites.64af8f61.svg') no-repeat  -788px -30px;
+  width: 22px;
+	height: 25px;
+
+
+}
+
+
+.header__account {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  margin-right: 1rem;
+}
+
+.header__avatar {
+  width: 3rem;
+  height: 3rem;
+  background-image: url(../../assets/carrot.png);
+  background-size: contain;
+  border-radius: 50%;
+}
+
+.header__username {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.header__sidebar{
+  background: url('../../img/Sprites.64af8f61.svg') no-repeat  -1157px -32px;
+  width: 32px;
+  height: 32px;
+  margin-top: 15px;
+  margin-left: 10px;
+
+}
