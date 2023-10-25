@@ -3,7 +3,7 @@
   <div class="dialog2-container">
     <div class="card-dialog2">
       <p class="card-title">Thông tin</p>
-
+    <button @click="btnCloseNotification" class="icon-close__notification"></button>
       <div class="card-title2">
         <li v-for="item in msgs" :key="item">{{ item }}</li>
         <img v-for="image in images" :src="image" :key="image" alt="Image" />
@@ -48,6 +48,10 @@ export default {
     btnOk() {
       this.closeNotification();
     },
+    btnCloseNotification() {
+    this.closeNotification();
+    console.log(this.closeNotification)
+    }
   },
 };
 </script>

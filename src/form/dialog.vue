@@ -43,7 +43,9 @@
             class="modal-inp"
             v-model="customer.DateOfBirth"
             style="width: 200px"
+            
           />
+ 
         </label>
 
         <div class="add-modal-gioitinh modal-lb-exc">
@@ -135,7 +137,7 @@
             style="width: 850px"
             api="https://cukcuk.manhnv.net/api/v1/customers"
             propText="CompanyName"
-            proValue="CustomerId"
+            proValue="CustomerCode"
             v-model="customer.CompanyName"
           ></m-combobox>
         </label>
@@ -206,7 +208,7 @@ export default {
       this.errors = {
         FullName: "",
         CustomerCode: "",
-        PhoneNumber: "",
+        PhoneNumber:""
       };
       if (!this.customer.FullName) {
         this.errors.FullName = "Không được để trống tên!";
@@ -232,7 +234,6 @@ export default {
           .then((res) => {
             console.log(res);
             const status = res.status;
-
             let msg = "";
             switch (status) {
               case 201:
@@ -306,7 +307,7 @@ export default {
       errors: {
         FullName: "",
         CustomerCode: "",
-        PhoneNumber: "",
+        PhoneNumber:""
       },
       customerOrigilJSON: "",
       newCustomerData: "",

@@ -112,12 +112,11 @@ thead {
   display: flex;
   justify-content: space-between;
 }
-.header__option{
+.header__option {
   background: url("../../img/Sprites.64af8f61.svg") no-repeat -1799px -478px;
   width: 32px;
-	height: 32px;
+  height: 32px;
   margin-top: 23px;
-  
 }
 .m-dialogform {
   z-index: 1;
@@ -127,7 +126,6 @@ thead {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-
 }
 
 .m-dialogform__container {
@@ -165,7 +163,6 @@ thead {
   border-radius: 4px;
   height: 2.5rem;
   width: 200px;
- 
 }
 
 .row0,
@@ -209,7 +206,6 @@ thead {
   margin-left: -12px;
 }
 
-
 .add-modal-sdt,
 .add-modal-noicap,
 .add-modal-email {
@@ -238,17 +234,13 @@ thead {
 tr:hover .edit-button button {
   visibility: visible;
 }
-.edit-icon{
+.edit-icon {
   background: url("../../img/Sprites.64af8f61.svg") no-repeat -1434px -90px;
   width: 22px;
-	height: 23px;
+  height: 23px;
   border: unset;
   position: relative;
 }
-
-
-
-
 
 .row0 {
   align-items: center;
@@ -260,9 +252,6 @@ tr:hover .edit-button button {
   display: block;
   cursor: pointer;
 }
-
-
-
 
 .table__tooltip {
   display: none;
@@ -296,14 +285,21 @@ select:focus {
   border-color: #50b83c;
 }
 
-
-.icon-close{
-  font-size: 24px;
-  background-color: #fff;
-  margin-top: -50px;
- color: red;
+.icon-close {
+  background: url("../../img/Sprites.64af8f61.svg") no-repeat -146px -147px;
+  width: 20px;
+  height: 18px;
 }
-.dialog2-container{
+.icon-close__notification {
+  background: url("../../img/Sprites.64af8f61.svg") no-repeat -1177px -362px;
+  width: 20px;
+  height: 18px;
+  margin-left: 380px;
+  
+
+
+}
+.dialog2-container {
   position: fixed;
   z-index: 1;
   top: 0;
@@ -320,10 +316,7 @@ select:focus {
   width: 416px;
   height: 173px;
   top: 150px;
-  left: 550px;
- 
-
-
+  left: 510px;
 }
 
 .card-dialog2 .card-title {
@@ -333,8 +326,8 @@ select:focus {
   position: relative;
   left: 24px;
   top: 24px;
+  
 }
-
 
 .card-dialog2 .card-title2 {
   font-size: 14px;
@@ -345,7 +338,7 @@ select:focus {
   color: #1f1f1f;
   position: relative;
   left: 24px;
-  top: 48px;
+  top: 24px;
 }
 
 .card-dialog2 .btn-dialog {
@@ -399,8 +392,8 @@ select:focus {
   border: 1px solid #e0e0e0;
   color: #ffffff;
   position: relative;
-  left: 300px;
-  top: 72px;
+  left: 310px;
+  top: 52px;
 }
 .card-dialog2 .btn-dialog3:hover {
   background-color: var(--coler-hover);
@@ -412,5 +405,3 @@ select:focus {
   width: var(--width-base);
   border-radius: var(--border-btn);
 }
-
-
