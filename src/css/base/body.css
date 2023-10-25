@@ -303,6 +303,15 @@ select:focus {
   margin-top: -50px;
  color: red;
 }
+.dialog2-container{
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 /* dialog2 */
 .card-dialog2 {
   position: fixed;
@@ -312,6 +321,7 @@ select:focus {
   height: 173px;
   top: 150px;
   left: 550px;
+ 
 
 
 }
@@ -327,8 +337,6 @@ select:focus {
 
 
 .card-dialog2 .card-title2 {
-
-  
   font-size: 14px;
   color: #1f1f1f;
   font-family: "Roboto", sans-serif;

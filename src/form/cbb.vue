@@ -18,7 +18,6 @@
   </div>
 </template>
 <script>
-
 export default {
   name: "MISACombobox",
   props: ["api", "propText", "propValue"],

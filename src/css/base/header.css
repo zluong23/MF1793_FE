@@ -1,4 +1,3 @@
-
 .header__left {
   display: flex;
   gap: 1rem;
@@ -9,41 +8,30 @@
 
 .header__sidebar span {
   font-size: 2rem;
-
 }
 
 .header-icon__logo {
-
-  background: url('../../img/Sprites.64af8f61.svg') no-repeat -352px -894px;
+  background: url("../../img/Sprites.64af8f61.svg") no-repeat -352px -894px;
   width: 32px;
-	height: 32px;
-
+  height: 32px;
 }
 .header-icon__down {
-
-  background: url('../../img/Sprites.64af8f61.svg') no-repeat -1799px -478px;
+  background: url("../../img/Sprites.64af8f61.svg") no-repeat -1799px -478px;
   width: 32px;
-	height: 32px;
+  height: 32px;
   margin-top: 25px;
-
 }
-.header__logo{
+.header__logo {
   flex: 1;
-  background: url('../../img/Sprites.64af8f61.svg') no-repeat -1131px -1688px;
+  background: url("../../img/Sprites.64af8f61.svg") no-repeat -1131px -1688px;
   width: 150px;
-	height: 36px;
-
-
+  height: 36px;
 }
-.header-icon__toastmessage{
-  
-  background: url('../../img/Sprites.64af8f61.svg') no-repeat  -788px -30px;
+.header-icon__toastmessage {
+  background: url("../../img/Sprites.64af8f61.svg") no-repeat -788px -30px;
   width: 22px;
-	height: 25px;
-
-
+  height: 25px;
 }
-
 
 .header__account {
   display: flex;
@@ -65,11 +53,10 @@
   font-weight: 600;
   font-size: 1.1rem;
 }
-.header__sidebar{
-  background: url('../../img/Sprites.64af8f61.svg') no-repeat  -1157px -32px;
+.header__sidebar {
+  background: url("../../img/Sprites.64af8f61.svg") no-repeat -1157px -32px;
   width: 32px;
   height: 32px;
   margin-top: 15px;
   margin-left: 10px;
-
 }

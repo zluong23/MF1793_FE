@@ -30,9 +30,8 @@
               <th>Ngày sinh</th>
               <th style="text-align: right">Tiền nợ</th>
               <th>Số điện thoại</th>
+              <th>Công ty</th>
               <th>Chức Năng</th>
-
-              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -51,6 +50,7 @@
                 {{ formatCurrency(cus.DebitAmount) }}
               </td>
               <td style="">{{ cus.PhoneNumber }}</td>
+              <td style="">{{ cus.CompanyName }}</td>
 
               <td class="edit-button">
                 <button class="edit-icon" @click="onRow(cus)"></button>
@@ -112,10 +112,10 @@ export default {
           const status = res.status;
           switch (status) {
             case 200:
-            this.$manhemitter.emit("onShowNotification", "Xóa thành công");
+              this.$manhemitter.emit("onShowNotification", "Xóa thành công");
               break;
             default:
-            this.$manhemitter.emit("onShowNotification", "Xóa thất bại!!!");
+              this.$manhemitter.emit("onShowNotification", "Xóa thất bại!!!");
               break;
           }
         })

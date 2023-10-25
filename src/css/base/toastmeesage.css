@@ -1,30 +1,29 @@
 .card-message2 {
-    height: 56px;
-    width: 450px;
-    border-radius: 4px;
-    background-color: aquamarine;
-  }
-  .title-message {
-    color: var(--coler-primary);
-    font-size: 14px;
-    position: relative;
-    top: 20px;
-    left: 40px;
-  }
-  .title-message2 {
-    font-size: 14px;
-    position: relative;
-    top: 20px;
-    left: 40px;
-  }
-  .title-message3 {
-    font-size: 14px;
-    position: relative;
-    top: 20px;
-    left: 120px;
-    text-decoration: underline
-  }
-  .card-message2 p {
-    display: inline;
-  }
-  
+  height: 56px;
+  width: 450px;
+  border-radius: 4px;
+  background-color: aquamarine;
+}
+.title-message {
+  color: var(--coler-primary);
+  font-size: 14px;
+  position: relative;
+  top: 20px;
+  left: 40px;
+}
+.title-message2 {
+  font-size: 14px;
+  position: relative;
+  top: 20px;
+  left: 40px;
+}
+.title-message3 {
+  font-size: 14px;
+  position: relative;
+  top: 20px;
+  left: 120px;
+  text-decoration: underline;
+}
+.card-message2 p {
+  display: inline;
+}

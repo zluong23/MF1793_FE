@@ -65,8 +65,7 @@ button[disabled] {
   background-color: #fff(--coler-primary);
   color: black;
   outline: none;
-  border: 1px solid #E6E6E6;
-  
+  border: 1px solid #e6e6e6;
 }
 
 .btn-cat:hover {
@@ -83,7 +82,4 @@ button[disabled] {
   color: #fff;
   outline: none;
   border: 1px solid var(--border-btn);
-  
-  
 }
-

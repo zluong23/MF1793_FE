@@ -1,16 +1,16 @@
 <template>
   <!--  -->
-  <div class="card-dialog2">
-    
-    <p class="card-title">Thông tin </p>
-  
-    <div class="card-title2">
+  <div class="dialog2-container">
+    <div class="card-dialog2">
+      <p class="card-title">Thông tin</p>
 
-      <li v-for="item in msgs" :key="item">{{ item }}</li>
-      <img v-for="image in images" :src="image" :key="image" alt="Image" />
+      <div class="card-title2">
+        <li v-for="item in msgs" :key="item">{{ item }}</li>
+        <img v-for="image in images" :src="image" :key="image" alt="Image" />
+      </div>
+
+      <button class="btn-dialog3" @click="btnOk">Đồng ý</button>
     </div>
-   
-    <button class="btn-dialog3" @click="btnOk">Đồng ý</button>
   </div>
   <!-- v-if="isShowDialog2" -->
 </template>
@@ -26,14 +26,14 @@ export default {
     msgs: {
       type: Array,
       default: () => {
-        return []
+        return [];
       },
       require: true,
     },
     images: {
       type: Array,
       default: () => {
-        return []
+        return [];
       },
       require: true,
     },
@@ -41,14 +41,14 @@ export default {
 
   data() {
     return {
-      onNotification:false,
-    }
+      onNotification: false,
+    };
   },
-  methods:{
-    btnOk(){
-      this.closeNotification()
-    }
-  }
+  methods: {
+    btnOk() {
+      this.closeNotification();
+    },
+  },
 };
 </script>
 <style>

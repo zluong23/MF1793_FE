@@ -1,14 +1,11 @@
-
 html {
   font-size: 14px;
 }
-
 
 main {
   background-color: #eee;
   padding: 16px 16px;
 }
-
 
 header {
   grid-column: 1 / span 2;

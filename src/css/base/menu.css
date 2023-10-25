@@ -5,10 +5,9 @@ aside div {
   border-radius: 4px;
   font-size: 2rem;
 }
-aside div p{
+aside div p {
   font-size: 14px;
   padding-top: 5px;
-
 }
 
 asdie,
@@ -20,33 +19,32 @@ a {
   color: white;
   margin-bottom: 0.3rem;
 }
-.icon_home{
-  background: url('../../img/Sprites.64af8f61.svg') no-repeat  -33px -1587px;
+.icon_home {
+  background: url("../../img/Sprites.64af8f61.svg") no-repeat -33px -1587px;
   height: 23px;
   width: 23px;
 }
-.icon_report{
-  background: url('../../img/Sprites.64af8f61.svg') no-repeat  -78px -1588px;
+.icon_report {
+  background: url("../../img/Sprites.64af8f61.svg") no-repeat -78px -1588px;
   height: 23px;
   width: 23px;
 }
-.icon_ures{
-  background: url('../../img/Sprites.64af8f61.svg') no-repeat  -121px -1590px;
+.icon_ures {
+  background: url("../../img/Sprites.64af8f61.svg") no-repeat -121px -1590px;
   width: 16px;
-	height: 18px;
+  height: 18px;
 }
-.icon_staff{
-  background: url('../../img/Sprites.64af8f61.svg') no-repeat  -33px -1587px;
+.icon_staff {
+  background: url("../../img/Sprites.64af8f61.svg") no-repeat -33px -1587px;
   height: 23px;
   width: 23px;
 }
-.icon_settings{
-  background: url('../../img/Sprites.64af8f61.svg') no-repeat    -90px -201px;
+.icon_settings {
+  background: url("../../img/Sprites.64af8f61.svg") no-repeat -90px -201px;
   width: 20px;
-	height: 22px;
+  height: 22px;
 }
 aside a:hover {
   background-color: #50b83c;
   border-radius: 4px;
 }
-
