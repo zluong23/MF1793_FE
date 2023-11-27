@@ -20,9 +20,16 @@
 <script>
 export default {
   name: "MISACombobox",
-  props: ["api", "propText", "propValue"],
+  props: ["api", "propText", "propValue"  ],
+
   created() {
     this.loadData();
+    console.log(this.modelValue)
+  },
+  watch:{
+    propValue: function(newValue) {
+      console.log("value thay doi: ",newValue)
+    }
   },
   methods: {
     onShowData() {
@@ -31,17 +38,28 @@ export default {
     loadData() {
       this.$maxios.get(this.api).then((res) => {
         this.data = res.data;
+        // console.log(this.modelValue)
         console.log(this.data);
-        const indexSelected = this.data.findIndex(
-          (i) => i[this.propValue] == this.modelValue
-        );
-        this.itemSelected = this.data[indexSelected];
+        // const indexSelected = this.data.findIndex(
+        //   i => i[this.propValue] == this.modelValue
+        // );
+        // console.log(indexSelected);
+        // this.itemSelected = this.data[indexSelected];
       });
+    //   this.$maxios.get(this.api).then((res) => {
+    // this.data = res.data;
+    // console.log(this.data);
+    // const indexSelected = this.data.findIndex(
+    //   (i) => i[this.propValue] == this.modelValue
+    // );
+    // console.log(indexSelected);
+    // this.itemSelected = indexSelected !== -1 ? this.data[indexSelected] : {};
+  // });
     },
     onSelectItem(item) {
       this.itemSelected = item;
       this.showData = false;
-      this.$emit("update:modedlValue", item[this.propValue]);
+      this.$emit("update:modelValue", item[this.propValue]);
     },
   },
   data() {

@@ -3,10 +3,15 @@
   <div class="dialog2-container">
     <div class="card-dialog2">
       <p class="card-title">Thông tin</p>
-    <button @click="btnCloseNotification" class="icon-close__notification"></button>
+      <button
+        @click="btnCloseNotification"
+        class="icon-close__notification"
+      ></button>
       <div class="card-title2">
+        <!-- <div class="l-icon__notification" :class="{'icon--add':type == 'add' , 'icon--hoi':type == 'hoi'}">
+
+        </div> -->
         <li v-for="item in msgs" :key="item">{{ item }}</li>
-        <img v-for="image in images" :src="image" :key="image" alt="Image" />
       </div>
 
       <button class="btn-dialog3" @click="btnOk">Đồng ý</button>
@@ -18,6 +23,11 @@
 export default {
   name: "MNotification",
   props: {
+    type: {
+      type: String,
+      default: "add",
+      require: false,
+    },
     closeNotification: {
       type: Function,
       default: () => {},
@@ -49,9 +59,9 @@ export default {
       this.closeNotification();
     },
     btnCloseNotification() {
-    this.closeNotification();
-    console.log(this.closeNotification)
-    }
+      this.closeNotification();
+      console.log(this.closeNotification);
+    },
   },
 };
 </script>

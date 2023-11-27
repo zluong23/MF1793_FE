@@ -44,7 +44,6 @@ export default {
     return {
       showToast: false,
       showNotification: false,
-
       msgForNotification: [],
     };
   },

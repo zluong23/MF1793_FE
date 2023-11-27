@@ -203,7 +203,6 @@ thead {
 .modal-inp__CMTND {
   padding: 1rem;
   margin-top: 0.3rem;
-  margin-left: -12px;
 }
 
 .add-modal-sdt,
@@ -240,8 +239,11 @@ tr:hover .edit-button button {
   height: 23px;
   border: unset;
   position: relative;
-}
 
+}
+.is-invalid {
+  border: 1px solid red;
+}
 .row0 {
   align-items: center;
   justify-content: space-between;
@@ -404,4 +406,14 @@ select:focus {
   height: var(--height-base);
   width: var(--width-base);
   border-radius: var(--border-btn);
+}
+.icon--add{
+  background: url("../../img/Sprites.64af8f61.svg") no-repeat -990px -462px;
+	width: 36px;
+	height: 36px;
+}
+.icon--hoi{
+  background: url("../../img/Sprites.64af8f61.svg") no-repeat -832px -462px;
+	width: 36px;
+	height: 36px;
 }

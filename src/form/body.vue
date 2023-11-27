@@ -18,6 +18,7 @@
         </div>
       </div>
       <div class="table__main">
+        <!-- Bảng nhân viên -->
         <table>
           <thead>
             <tr>
@@ -30,11 +31,11 @@
               <th>Ngày sinh</th>
               <th style="text-align: right">Tiền nợ</th>
               <th>Số điện thoại</th>
-              <th>Công ty</th>
               <th>Chức Năng</th>
             </tr>
           </thead>
           <tbody>
+            <!-- Thêm dữ liệu từ API vào -->
             <tr v-for="cus in customers" :key="cus.CustomerCode">
               <td>
                 <input type="checkbox" style="height: 24px; width: 24px" />
@@ -50,16 +51,13 @@
                 {{ formatCurrency(cus.DebitAmount) }}
               </td>
               <td style="">{{ cus.PhoneNumber }}</td>
-              <td style="">{{ cus.CompanyName }}</td>
 
               <td class="edit-button">
                 <button class="edit-icon" @click="onRow(cus)"></button>
                 <button
                   class="edit-icon__delete"
                   @click="btnXoa(cus.CustomerId)"
-                >
-                  X
-                </button>
+                ></button>
               </td>
             </tr>
           </tbody>
@@ -71,6 +69,7 @@
         </div>
       </div>
     </div>
+    <!-- Dialog form thêm sửa xóa nhân viên -->
     <TheDialog
       v-if="isShowDialog"
       :closeDiaLog="oncloseDiaLog"
@@ -87,22 +86,18 @@ export default {
   components: {
     TheDialog,
   },
-
+  //  hàm chuyển kiểu dữ liệu date
   computed: {
     formattedDate() {
       return (date) => {
         const dateObj = new Date(date);
-        const day = dateObj.getDate();
-        const month = dateObj.getMonth() + 1;
-        const year = dateObj.getFullYear();
-        const formatted = `${day < 10 ? "0" + day : day}/${
-          month < 10 ? "0" + month : month
-        }/${year}`;
-        return formatted;
+        const options = { year: "numeric", month: "2-digit", day: "2-digit" };
+        return dateObj.toLocaleDateString("en-GB", options);
       };
     },
-    //tham chieu
   },
+
+  // Hàm xóa nhân viên theo Id
   methods: {
     btnXoa(CustomerId) {
       this.$maxios
@@ -124,25 +119,26 @@ export default {
         });
     },
 
-    // ...
-
+  // Show form nhân viên
     onRow(cus) {
       this.isShowDialog = true;
       this.customersUpdate = cus;
     },
+  // Bấm vào icon update hiện  form nhân viên
     clickUpdate(cus) {
       console.log(cus);
       this.isShowDialog = true;
     },
+  // Ẩn form nhân viên
     oncloseDiaLog() {
       this.isShowDialog = false;
     },
-
+  //
     btnOnShowDiaLog() {
       this.isShowDialog = true;
       this.customersUpdate = {};
     },
-
+  // hàm chuyển đổi đơn vị tiền tệ VN
     formatCurrency(amount) {
       const formatter = new Intl.NumberFormat("vi-VN", {
         style: "currency",
@@ -150,33 +146,26 @@ export default {
       });
       return formatter.format(amount);
     },
-    // cliclSave(itemSave) {
-    //   let index = this.customers.findIndex(
-    //     (c) => c.CustomerCode === itemSave.CustomerCode
-    //   );
-    //   if (index >= 0) {
-    //     this.customers.splice(index, 1, itemSave);
-    //   } else {
-    //     this.customers.push(itemSave);
-    //   }
-    //   return;
-    // },
-    // ////////////////////////////////
   },
   //hàm truyền dữ liệu từ api
   created() {
-    // fetch("https://cukcuk.manhnv.net/api/v1/customers")
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     console.log(data);
-    //     this.customers = data;
-    //   });
-
     this.$maxios
       .get("https://cukcuk.manhnv.net/api/v1/customers")
       .then((res) => {
         console.log(res);
-        this.customers = res.data;
+        this.customers = res.data.map((customer) => {
+  // chuyển đổi dữ liệu từ dateTime thành date
+          const dateObj = new Date(customer.DateOfBirth);
+          const formattedDate = `${dateObj.getFullYear()}-${(
+            dateObj.getMonth() + 1
+          )
+            .toString()
+            .padStart(2, "0")}-${dateObj
+            .getDate()
+            .toString()
+            .padStart(2, "0")}`;
+          return { ...customer, DateOfBirth: formattedDate };
+        });
       })
       .catch((error) => {
         console.log(error);

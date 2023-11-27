@@ -68,9 +68,13 @@
   flex: 1;
 }
 .edit-icon__delete {
+  background: url("../../img/Sprites.64af8f61.svg") no-repeat -147px -147px;
+  width: 22px;
+  height: 23px;
+  border: unset;
   margin-left: 20px;
-  color: red;
-  font-size: 20px;
+ 
+  
 }
 .icon {
   background: url("../../img/Sprites.64af8f61.svg") no-repeat -1129px -365px;

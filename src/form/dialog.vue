@@ -7,13 +7,16 @@
       </div>
       <div class="row1">
         <label class="add-modal-makh modal-lb">
+          <!-- Input validate và binding 2 chiều Mã nhân viên  -->
           <span> Mã khách hàng <span style="color: red">*</span> </span>
           <input
+           ref="customerCodeInput"
             type="text"
             class="modal-inp"
             v-model="customer.CustomerCode"
             v-bind:class="{ 'is-invalid': errors.CustomerCode }"
           />
+          <!-- Hiển thị lỗi đỏ  -->
           <div
             class="invalid-feedback"
             style="font-size: 10px; color: red; margin-top: 5px"
@@ -22,6 +25,7 @@
           </div>
         </label>
         <label class="add-modal-makh modal-lb">
+          <!-- Input validate và binding 2 chiều Họ tên nhân viên -->
           <span> Họ và Tên <span style="color: red">*</span> </span>
           <input
             type="text"
@@ -36,51 +40,58 @@
             {{ errors.FullName }}
           </div>
         </label>
+
+        <!-- Input binding 2 chiều Ngày sinh nhân viên  -->
         <label class="add-modal-makh modal-lb">
           Ngày sinh
           <input
             type="date"
             class="modal-inp"
             v-model="customer.DateOfBirth"
-            style="width: 200px"
-            
+            style="width: 200px; font-family: Roboto, sans-serif"
           />
- 
         </label>
+        <div class="modal-radio">
+          <!-- Radio button binding 2 chiều Giới tính nhân viên  -->
+          <label class="add-modal-makh modal-lb"> Giới tính </label>
+          <!--Giới tính nam = 0 -->
 
-        <div class="add-modal-gioitinh modal-lb-exc">
-          <div class="modal-radio-text">
-            <span>Giơi tính</span>
-          </div>
-          <div class="modal-radio">
-            <input
-              type="radio"
-              name="gioitinh"
-              value="Nam"
-              class="modal-radio"
-              style="width: 20px; height: 20px"
-            />
-            <label style="margin-left: 5px">Nam</label>
-            <input
-              type="radio"
-              name="gioitinh"
-              value="Nữ"
-              class="modal-radio"
-              style="width: 20px; height: 20px; margin-left: 10px"
-            />
-            <label style="margin-left: 5px">Nữ</label>
-            <input
-              type="radio"
-              name="gioitinh"
-              value="Khác"
-              class="modal-radio"
-              style="width: 20px; height: 20px; margin-left: 10px"
-            />
-            <label style="margin-left: 5px">Khác</label>
-          </div>
+          <input
+            type="radio"
+            name="gioitinh"
+            value="0"
+            class="modal-radio"
+            style="width: 20px; height: 20px"
+            v-model="customer.Gender"
+          />
+
+          <!-- Giới tính nữ = 1 -->
+          <label style="margin-left: 5px">Nam</label>
+          <input
+            type="radio"
+            name="gioitinh"
+            value="1"
+            class="modal-radio"
+            style="width: 20px; height: 20px; margin-left: 10px"
+            v-model="customer.Gender"
+          />
+          <label style="margin-left: 5px">Nữ</label>
+          <!-- Giới tính khác = 2 -->
+
+          <input
+            type="radio"
+            name="gioitinh"
+            value="2"
+            class="modal-radio"
+            style="width: 20px; height: 20px; margin-left: 10px"
+            v-model="customer.Gender"
+          />
+          <label style="margin-left: 5px">Khác</label>
         </div>
       </div>
       <div class="row2">
+        <!-- Input binding 2 chiều Số điện thoại nhân viên  -->
+
         <label class="add-modal-sdt modal-lb">
           Số điện thoại
           <input
@@ -97,10 +108,14 @@
             {{ errors.PhoneNumber }}
           </div>
         </label>
+
+        <!-- Input binding 2 chiều CMTND nhân viên  -->
         <label class="add-modal-makh modal-lb">
           Số CMTND
           <input type="text" class="modal-inp__CMTND" />
         </label>
+
+        <!-- Input binding 2 chiều Ngày cấp nhân viên  -->
         <label class="add-modal-makh modal-lb">
           Ngày cấp
           <input
@@ -111,42 +126,45 @@
           />
         </label>
       </div>
-
       <div class="row3">
+        <!-- Input binding 2 chiều Email nhân viên  -->
         <label class="add-modal-email modal-lb">
           Email
-          <input type="text" class="modal-inp" />
+          <input type="text" class="modal-inp" v-model="customer.Email" />
         </label>
+
+        <!-- Input binding 2 chiều Nơi cấp nhân viên  -->
         <label class="add-modal-noicap modal-lb">
           Nơi cấp
           <input type="text" class="modal-inp" />
         </label>
       </div>
-
       <div class="row4">
+        <!-- Input binding 2 chiều Số tiền nợ nhân viên  -->
         <label class="add-modal-sotienno modal-lb">
           Số tiền nợ
           <input type="text" class="modal-inp" v-model="customer.DebitAmount" />
         </label>
       </div>
-
       <div class="row5">
+        <!-- Input binding 2 chiều Công ty nhân viên  -->
         <label class="add-modal-congty modal-lb">
           Công ty
-          <m-combobox
+          <!-- <m-combobox
             style="width: 850px"
-            api="https://cukcuk.manhnv.net/api/v1/customers"
-            propText="CompanyName"
-            proValue="CustomerCode"
-            v-model="customer.CompanyName"
-          ></m-combobox>
+            api="https://cukcuk.manhnv.net/api/v1/customerGroups"
+            propText="customersGroupName"
+            propValue="customersGroupId"
+            v-model="customer.customersGroupId"
+          ></m-combobox> -->
+          <input type="text" class="modal-inp" v-model="customer.CompanyName" />
         </label>
       </div>
-
       <div class="row6">
+        <!-- Input binding 2 chiều Địa chỉ nhân viên  -->
         <label class="add-modal-diachi modal-lb">
           Địa chỉ
-          <input type="text" class="modal-inp" />
+          <input type="text" class="modal-inp" v-model="customer.Address" />
         </label>
       </div>
       <div class="row7">
@@ -160,18 +178,7 @@
 export default {
   name: "MyDialog",
   computed: {
-    formattedDate() {
-      return (date) => {
-        const dateObj = new Date(date);
-        const day = dateObj.getDate();
-        const month = dateObj.getMonth() + 1;
-        const year = dateObj.getFullYear();
-        const formatted = `${day < 10 ? "0" + day : day}/${
-          month < 10 ? "0" + month : month
-        }/${year}`;
-        return formatted;
-      };
-    },
+    // Nếu truyền vào code thì edit còn ngược lại là add
     formMode: function () {
       if (this.customerInput.CustomerCode) {
         return "edit";
@@ -179,7 +186,6 @@ export default {
         return "add";
       }
     },
-    //tham chieu
   },
   props: {
     customerInput: {
@@ -187,11 +193,13 @@ export default {
       default: () => {},
       required: false,
     },
+    // Đóng form
     closeDiaLog: {
       type: Function,
       default: () => {},
       required: false,
     },
+    // Mở form 2
     openDiaLog2: {
       type: Function,
       default: () => {},
@@ -202,39 +210,56 @@ export default {
       default: null,
     },
   },
-
+  // Hàm validate
   methods: {
     validate() {
       this.errors = {
         FullName: "",
         CustomerCode: "",
-        PhoneNumber:""
+        PhoneNumber: "",
       };
+
+      // Không được để trống tên
       if (!this.customer.FullName) {
         this.errors.FullName = "Không được để trống tên!";
       }
+
+      // Không được để trống mã
       if (!this.customer.CustomerCode) {
         this.errors.CustomerCode = "Không được để trống mã!";
       }
+      // Không được để trống số điện thoại
       if (!this.customer.PhoneNumber) {
         this.errors.PhoneNumber = "Không được để trống số điện thoại!";
       }
     },
+
+    // đóng form
     btnCloseDiaLog() {
       this.closeDiaLog();
     },
+
+    // nút hủy để đóng form
     btnHuy() {
       this.closeDiaLog();
     },
+
+    // nút cat để thêm hoặc edit
     btnCat() {
-      this.validate();
+     
+     
+
+      // nếu là add
       if (this.formMode == "add") {
+         // truyền hàm validate vào
+        this.validate();
+        // lấy ra API Post
         this.$maxios
           .post("https://cukcuk.manhnv.net/api/v1/customers", this.customer)
           .then((res) => {
             console.log(res);
             const status = res.status;
-            let msg = "";
+            // check lỗi
             switch (status) {
               case 201:
                 this.$manhemitter.emit(
@@ -247,25 +272,40 @@ export default {
                 this.$manhemitter.emit("onShowNotification", "Có lỗi xảy ra");
                 break;
               case 500:
-                msg = "co loi xay ra";
-                alert(msg);
+                this.$manhemitter.emit("onShowNotification", "Có lỗi xảy ra");
                 break;
 
               default:
-                msg = "co loi xay ra";
-                alert(msg);
                 this.$manhemitter.emit("onShowNotification", "Có lỗi xảy ra");
                 break;
             }
           })
           .catch((error) => {
             console.log(error);
+
             this.$manhemitter.emit(
               "onShowNotification",
               "Bạn chưa nhập hết thông tin!!!"
             );
+            this.type == "hoi";
           });
+
+        // nếu là edit
       } else if (this.formMode === "edit") {
+        // update giới tính nam = 0
+        if (this.customer.Gender === "0") {
+          this.customer.Gender = 0;
+
+          // update giới tính nữ = 1
+        } else if (this.customer.Gender === "1") {
+          this.customer.Gender = 1;
+
+          // update giới tính nữ = 2
+        } else if (this.customer.Gender === "2") {
+          this.customer.Gender = 2;
+        }
+
+        // Lấy API để Put
         this.$maxios
           .put(
             `https://cukcuk.manhnv.net/api/v1/customers/${this.customerInput.CustomerId}`,
@@ -282,13 +322,17 @@ export default {
           });
       }
     },
-    btnSave() {
-      this.closeDiaLog();
-    },
   },
   created() {
     this.customerOrigilJSON = JSON.stringify(this.customerInput);
     this.customer = JSON.parse(this.customerOrigilJSON);
+    if (this.customer.Gender === "0") {
+      this.customer.Gender = "0";
+    } else if (this.customer.Gender === "1") {
+      this.customer.Gender = "1";
+    } else if (this.customer.Gender === "2") {
+      this.customer.Gender = "2";
+    }
 
     if (this.formMode == "add") {
       this.$maxios
@@ -304,14 +348,16 @@ export default {
 
   data() {
     return {
+     
       errors: {
         FullName: "",
         CustomerCode: "",
-        PhoneNumber:""
+        PhoneNumber: "",
       },
       customerOrigilJSON: "",
       newCustomerData: "",
       customer: {
+        CustomerId: "",
         FullName: "",
         CustomerCode: "",
         DateOfBirth: "",
